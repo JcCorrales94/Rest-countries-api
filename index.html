@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style/style.css">
+  <title></title> 
+</head>
+<body class="bg-[rgb(32,45,54)]">
+  <header class=" shadow-lg bg-[rgb(43,55,67)]">
+    <div class="container mx-auto px-10 py-5">
+      <nav class="nav flex justify-between">
+        <h1 class="text-white font-bold text-xl">Where is the world?</h1>
+        <p class="text-white ">Dark Mode</p>
+      </nav>
+    </div>
+  </header>
+  <section class=" container mx-auto px-10">
+      <div class="input-group">
+        <div class="flex align-middle justify-between">
+            <div class="flex  ">
+              <div class="bg-[rgb(43,55,67)] shadow-lg rounded-l-md text-white mt-10 pl-4 pt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-10">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+              </div>
+              <input class="form-input shadow-lg border-none bg-[rgb(43,55,67)] focus:text-slate-400 mt-10 h-12 w-80 rounded-r-md pl-5 text-sm" placeholder="Search for a country..." type="text">
+            </div>
+            <div class="mt-10">
+              <select name="region" class="w-44 h-12 shadow-lg form-select border-none rounded-md bg-[rgb(43,55,67)] text-white px-3 text-sm" name="region" id="region">
+                <option value="">Filter by Region</option>
+                <option value="africa">África</option>
+                <option value="america">America</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="oceania">Oceania</option>
+              </select>
+            </div>
+        </div>
+
+      </div>
+  </section>
+  <section class="container mx-auto box-region grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <article class="region bg-[rgb(43,55,67)] w-56 h-72 my-14 mx-20">
+      <img src="https://flagcdn.com/w320/cu.png" alt="bandera de cuba">
+      <div class="p-5 text-lg text-white">
+        <p class="font-bold mb-3">Cuba</p>
+        <p class="text-sm mb-2">Population: <span class="text-slate-300">NaN</span></p>
+        <p class="text-sm mb-2">Region: <span class="text-slate-300">America</span></p>
+        <p class="text-sm">Capital: <span class="text-slate-300">La Habana</span></p>
+      </div>
+    </article>
+    <article class="region bg-[rgb(43,55,67)] w-56 h-72 my-14 mx-20">
+      <img src="https://flagcdn.com/w320/cu.png" alt="bandera de cuba">
+      <div class="p-5 text-lg text-white">
+        <p class="font-bold mb-3">Cuba</p>
+        <p class="text-sm mb-2">Population: <span class="text-slate-300">NaN</span></p>
+        <p class="text-sm mb-2">Region: <span class="text-slate-300">America</span></p>
+        <p class="text-sm">Capital: <span class="text-slate-300">La Habana</span></p>
+      </div>
+    </article>
+    <article class="region bg-[rgb(43,55,67)] w-56 h-72 my-14 mx-20">
+      <img src="https://flagcdn.com/w320/cu.png" alt="bandera de cuba">
+      <div class="p-5 text-lg text-white">
+        <p class="font-bold mb-3">Cuba</p>
+        <p class="text-sm mb-2">Population: <span class="text-slate-300">NaN</span></p>
+        <p class="text-sm mb-2">Region: <span class="text-slate-300">America</span></p>
+        <p class="text-sm">Capital: <span class="text-slate-300">La Habana</span></p>
+      </div>
+    </article>
+    <article class="region bg-[rgb(43,55,67)] w-56 h-72 my-14 mx-20">
+      <img src="https://flagcdn.com/w320/cu.png" alt="bandera de cuba">
+      <div class="p-5 text-lg text-white">
+        <p class="font-bold mb-3">Cuba</p>
+        <p class="text-sm mb-2">Population: <span class="text-slate-300">NaN</span></p>
+        <p class="text-sm mb-2">Region: <span class="text-slate-300">America</span></p>
+        <p class="text-sm">Capital: <span class="text-slate-300">La Habana</span></p>
+      </div>
+    </article>
+  </section>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
