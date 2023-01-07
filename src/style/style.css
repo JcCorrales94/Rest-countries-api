@@ -1,4 +1,4 @@
-    @tailwindcss/forms;
-		@tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwindcss/forms;
