@@ -2,14 +2,13 @@ const darkMode = document.querySelector('.dark-mode')
 const seach = document.querySelector('.input-seach')
 const selectRegion = document.querySelector('.select-region')
 const boxRegion = document.querySelector('.box-region')
-console.log(boxRegion)
 
 fetch('https://restcountries.com/v3.1/all')
   .then((resp) => {
     return resp.json()
   })
   .then((data) => {
-    data.forEach(region => {
+    return data.forEach(region => {
       const article = document.createElement('article')
       article.classList.add('region', 'flex', 'flex-col', 'justify-between', 'rounded-xl', 'bg-[rgb(43,55,67)]', 'overflow-auto', 'w-56', 'h-100', 'my-14', 'mx-20')
       article.innerHTML = `
