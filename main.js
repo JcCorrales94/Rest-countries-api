@@ -7,16 +7,16 @@ const url = 'https://restcountries.com/v3.1/all'
 let allRegion = []
 function createAPI (region) {
   const regionHTML = document.createElement('article')
-  regionHTML.classList.add('region', 'flex', 'flex-col', 'justify-between', 'rounded-xl', 'bg-[rgb(43,55,67)]', 'overflow-auto', 'w-56', 'h-100', 'my-14', 'mx-20', 'shadow-lg')
+  regionHTML.classList.add('region', 'flex', 'flex-col', 'justify-between', 'rounded-xl', 'dark:bg-[rgb(43,55,67)]', 'overflow-auto', 'w-56', 'h-100', 'my-14', 'mx-20', 'shadow-lg')
   regionHTML.innerHTML = `
-    <div class="w-full h-1/2 flex justify-center overflow-auto">
+    <div class="w-full shadow-lg h-1/2 flex justify-center overflow-auto">
       <img class="flags h-full" src="${region.flags.png}" alt="bandera de cuba">
     </div>
-    <div class="p-5 title flex flex-col gap-4 text-lg text-white">
+    <div class="p-5 title flex flex-col gap-4 text-lg dark:text-white">
       <p class="name font-bold">${region.name.common}</p>
-      <p class="population text-sm">Population: <span class="text-slate-300">${region.population}</span></p>
-      <p class="continente text-sm">Region: <span class="text-slate-300">${region.region}</span></p>
-      <p class="capital text-sm">Capital: <span class="text-slate-300">${region.capital}</span></p>
+      <p class="population text-sm">Population: <span class="dark:text-slate-300">${region.population}</span></p>
+      <p class="continente text-sm">Region: <span class="dark:text-slate-300 text-slate-600">${region.region}</span></p>
+      <p class="capital text-sm">Capital: <span class="dark:text-slate-300 text-slate-600">${region.capital}</span></p>
     </div>
     `
 
@@ -70,33 +70,8 @@ seach.addEventListener('keyup', (event) => {
   }
 })
 
-const darkModeText = document.querySelector('.paragraph')
-const title = document.querySelector('.title')
-const header = document.querySelector('.header')
-const h1 = document.querySelector('h1')
-const moon = document.querySelector('.moon')
-const lupa = document.querySelector('.lupa')
-console.log(darkModeText)
+const dark = document.querySelector('html')
 darkMode.onclick = () => {
-  document.body.classList.toggle('bg-[rgb(32,45,54)]')
-  document.body.classList.toggle('bg-white')
-  header.classList.toggle('bg-[rgb(43,55,67)]')
-  header.classList.toggle('bg-white')
-  h1.classList.toggle('text-white')
-  h1.classList.toggle('text-black')
-  moon.classList.toggle('text-white')
-  moon.classList.toggle('text-black')
-  darkModeText.classList.toggle('text-white')
-  darkModeText.classList.toggle('text-black')
-  seach.classList.toggle('bg-[rgb(43,55,67)]')
-  seach.classList.toggle('bg-white')
-  lupa.classList.toggle('bg-[rgb(43,55,67)]')
-  lupa.classList.toggle('bg-white')
-  selectRegion.classList.toggle('bg-[rgb(43,55,67)]')
-  selectRegion.classList.toggle('bg-white')
-  lupa.classList.toggle('text-white')
-  lupa.classList.toggle('text-black')
-  selectRegion.classList.toggle('text-white')
-  selectRegion.classList.toggle('text-black')
+  // document.html.classList.toggle('dark')
+  dark.classList.toggle('dark')
 }
-console.log(title)
