@@ -5,7 +5,8 @@ const selectRegion = document.querySelector('.select-region')
 const boxRegion = document.querySelector('.box-region')
 const url = 'https://restcountries.com/v3.1/all'
 let allRegion = []
-function createAPI (region) {
+
+function createHTML (region) {
   const regionHTML = document.createElement('article')
   regionHTML.classList.add('region', 'flex', 'flex-col', 'justify-between', 'rounded-xl', 'dark:bg-[rgb(43,55,67)]', 'overflow-auto', 'w-56', 'h-100', 'my-14', 'mx-20', 'shadow-lg')
   regionHTML.innerHTML = `
@@ -23,15 +24,15 @@ function createAPI (region) {
   return regionHTML
 }
 
-const printRegion = (nation) => {
+const printRegion = (allCountri) => {
   // Borramos el contenido de toda la caja que contiene las banderas
 
   boxRegion.innerHTML = ''
 
   // Generamos el contenido de las banderas
 
-  nation.forEach((region) => {
-    const regionHTML = createAPI(region)
+  allCountri.forEach((region) => {
+    const regionHTML = createHTML(region)
     // Lo llevamos al DOM
     boxRegion.append(regionHTML)
   })
@@ -40,9 +41,9 @@ const printRegion = (nation) => {
 const getRegionFromAPI = () => {
   fetch(url)
     .then(resp => resp.json())
-    .then(region => {
-      allRegion = region
-      printRegion(region)
+    .then(allCountri => {
+      allRegion = allCountri
+      printRegion(allCountri)
     })
     .catch(err => createAlertTailwind(err.message))
 }
